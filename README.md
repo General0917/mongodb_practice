@@ -14,6 +14,10 @@
 
 - 参考URL：https://qiita.com/yuji0602/items/c55e2cb75376fd565b4e
 
+# MongoDB Shellの使い方
+
+- 参考URL：https://qiita.com/ekzemplaro/items/dd712c2af1c908a97965
+
 # MongoDBログイン
 
 - MongoDBのコンテナ(Docker)を起動する。
