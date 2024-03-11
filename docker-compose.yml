@@ -3,6 +3,9 @@ version: "3.1"
 services:
   mongo:
     image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
     networks:
       - mongo_network
     restart: always
@@ -11,9 +14,11 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${USER_ADMIN_PASS}
     volumes:
       - mongodb_data1:/data/db
+    command: "mongod --dbpath /data/db --auth"
 
   mongo-express:
     image: mongo-express
+    container_name: mongo-express
     networks:
       - mongo_network
     restart: always
@@ -30,6 +35,7 @@ services:
 
   mongo-client:
     image: mongo
+    container_name: mongo-client
     networks:
       - mongo_network
     restart: always
